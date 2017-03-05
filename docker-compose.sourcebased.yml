@@ -1,0 +1,20 @@
+version: '2'
+services:
+  dcc:
+    build:
+      context: docker
+      args:
+          version: 1.3.159
+    networks:
+      local:
+        ipv4_address: 10.0.0.1
+    restart: "always"
+    volumes:
+      - "dcc-config:/dcc/config"
+volumes:
+  dcc-config:
+    driver: local
+    driver_opts:
+      type: none
+      device: /data/dcc/config
+      o: bind

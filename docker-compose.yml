@@ -1,0 +1,5 @@
+version: '2'
+services:
+  dcc:
+    image: ezh1k/dcc
+    restart: unless-stopped

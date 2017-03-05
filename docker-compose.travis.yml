@@ -1,0 +1,9 @@
+version: '2'
+services:
+  dcc:
+    build:
+      context: docker
+      args:
+          version: 1.3.159
+    image: dcc:latest
+    restart: "no"
