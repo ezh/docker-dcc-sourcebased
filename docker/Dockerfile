@@ -1,6 +1,6 @@
 FROM buildpack-deps:jessie-curl
 
-COPY *SUMS /opt
+COPY *SUMS /opt/
 COPY entrypoint.sh /
 
 ARG version=1.3.158
