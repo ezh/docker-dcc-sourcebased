@@ -18,6 +18,19 @@ Execution
 
 DCC executed directly as PID 1 process with logging to `STDOUT`/`STDERR`.
 
+Tips:
+
+Find service command line:
+1. edit `/dcc/conf/dcc_config` if needed
+2. docker run --rm -it dcc /bin/bash
+3. run suitable service
+  * /dcc/bin/start-dccd -a ...
+  * /dcc/bin/start-dccifd -a ...
+  * /dcc/bin/start-dccm -a ...
+  * /dcc/bin/start-grey -a ...
+4. get default command line arguments with `ps -fp <PID> | cat`
+5. adjust **cmd*** of `docker-compose.yml`
+
 DCC layout
 ----------
 
