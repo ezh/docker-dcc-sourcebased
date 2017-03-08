@@ -9,7 +9,7 @@ DCC build from source from https://www.dcc-servers.net/dcc/
 By default it builds *dcc-1.3.159* if you use docker compose and *dcc-1.3.158* if you build directly from Dockerfile.
 
 [Hint #1](https://github.com/ezh/docker-dcc-sourcebased/blob/master/docker/Dockerfile#L6),
-[Hint #2](https://github.com/ezh/docker-dcc-sourcebased/blob/master/docker-compose.yml#L7)
+[Hint #2](https://github.com/ezh/docker-dcc-sourcebased/blob/master/docker-compose.travis.yml#L7)
 
 Image is based on `debian/jessie`, the same as an official Jenkis docker container.
 
