@@ -1,5 +1,18 @@
 version: '2'
 services:
   dcc:
+    command:
+      - "/dcc/bin/dccifd"
+      - "-tREP,20"
+      - "-tCMN,25,50"
+      - "-l/dcc/log"
+      - "-w/dcc/conf/whiteclnt"
+      - "-U/dcc/conf"
+      - "-SHELO"
+      - "-Smail_host"
+      - "-SSender"
+      - "-SList-ID"
+      - "-b"
+      - "-p *,10030,127.0.0.0/8"
     image: ezh1k/dcc
     restart: unless-stopped

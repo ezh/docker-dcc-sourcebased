@@ -16,20 +16,25 @@ Image is based on `debian/jessie`, the same as an official Jenkis docker contain
 Execution
 ---------
 
-DCC executed directly as PID 1 process with logging to `STDOUT`/`STDERR`.
+DCC is executed directly as PID 1 process with logging to `STDOUT`/`STDERR`.
 
 Tips:
 
-Find service command line:
+To find service command line:
+
 1. edit `/dcc/conf/dcc_config` if needed
-2. docker run --rm -it dcc /bin/bash
+
+2. `docker run --rm -it dcc /bin/bash`
+
 3. run suitable service
-  * /dcc/bin/start-dccd -a ...
-  * /dcc/bin/start-dccifd -a ...
-  * /dcc/bin/start-dccm -a ...
-  * /dcc/bin/start-grey -a ...
+  * `/dcc/bin/start-dccd -a ...`
+  * `/dcc/bin/start-dccifd -a ...`
+  * `/dcc/bin/start-dccm -a ...`
+  * `/dcc/bin/start-grey -a ...`
+
 4. get default command line arguments with `ps -fp <PID> | cat`
-5. adjust **cmd*** of `docker-compose.yml`
+
+5. adjust **command:** of `docker-compose.yml` like [this](https://github.com/ezh/docker-dcc-sourcebased/blob/master/docker-compose.yml)
 
 DCC layout
 ----------
